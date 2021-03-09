@@ -2,12 +2,21 @@ function computerPlay(){
     return Math.floor(Math.random()*3);
 }
 let choice=["rock","paper","scissors"];
-let nRounds=prompt("how many rounds do you want to play?")
+let x=false;
+let nRounds
+while(!x){
+nRounds=prompt("You want to play to the best of ? (max 5)")
+if(nRounds<=5){
+    x=true;
+}else{
+    alert("insert a valid input");
+}
+}
 let userScore=0;
 let pcScore=0;
 let userPlay;
-let x=true;
-for(let i=0;i<nRounds;i++){
+
+for(let i=0;userScore<=nRounds||pcScore<=nRounds;i++){
     x=true;
     while(x){
     userPlay= prompt("Rock, Paper or Scissors ?");
