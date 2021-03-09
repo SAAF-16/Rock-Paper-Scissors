@@ -13,9 +13,9 @@ for(let i=0;i<nRounds;i++){
     userPlay= prompt("Rock, Paper or Scissors ?");
     if((userPlay.toLowerCase()==choice[0])||(userPlay.toLowerCase()==choice[1])||(userPlay.toLowerCase()==choice[2])){
         x=false;
-        break;
+    }else{
+        alert("insert a valid input");
     }
-    alert("insert a valid input");
     }
     userPlay=(userPlay==choice[0])?userPlay=0
     :(userPlay==choice[1])?userPlay=1
