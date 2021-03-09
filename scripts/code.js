@@ -3,32 +3,33 @@ function computerPlay(){
 }
 let choice=["rock","paper","scissors"];
 let x=false;
-let nRounds
-while(!x){
-nRounds=prompt("You want to play to the best of ? (max 5)")
-if(nRounds<=5){
-    x=true;
-}else{
-    alert("insert a valid input");
-}
-}
+let nRounds;
 let userScore=0;
 let pcScore=0;
 let userPlay;
 
-for(let i=0;userScore<=nRounds||pcScore<=nRounds;i++){
-    x=true;
-    while(x){
-    userPlay= prompt("Rock, Paper or Scissors ?");
-    if((userPlay.toLowerCase()==choice[0])||(userPlay.toLowerCase()==choice[1])||(userPlay.toLowerCase()==choice[2])){
-        x=false;
+while(!x){
+    nRounds=+(prompt("You want to play to the best of ? (max 5)"));
+    if(nRounds<=5){
+        x=true;
     }else{
         alert("insert a valid input");
     }
+}
+
+for(let i=0;userScore<nRounds&&pcScore<nRounds;i++){
+    x=true;
+    while(x){
+        userPlay= prompt("Rock, Paper or Scissors ?");
+        if((userPlay.toLowerCase()==choice[0])||(userPlay.toLowerCase()==choice[1])||(userPlay.toLowerCase()==choice[2])){
+            x=false;
+        }else{
+            alert("insert a valid input");
+        }
     }
     userPlay=(userPlay==choice[0])?userPlay=0
-    :(userPlay==choice[1])?userPlay=1
-    :userPlay=2;
+        :(userPlay==choice[1])?userPlay=1
+        :userPlay=2;
     let pcPlay=computerPlay();
     alert(`Computer played ${ choice[pcPlay] } !`);
     if(((userPlay+2)%3)==(pcPlay)){
