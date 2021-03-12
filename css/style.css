@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    padding:20px 50px;
+    margin: 0;
+    background-color: rgb(77, 172, 99);
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    background-color: aliceblue;
+    height: 10%;
+    flex-shrink: 1;
+    text-align: center;
+    padding: 5px;
+}
+h1{
+    margin:0;
+}
+#container{
+    flex-shrink: 1;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: aqua
+    ;
+
+}
+#right,#left{
+    margin: 5px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: space-around;
+
+}
+#center{
+    width: 50%;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+#scoreboard{
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+#score{
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+#score>p{
+    height: 70%;
+}
+#score>span{
+    height: 30%;
+}
+
+#game{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    height: 70%;
+}
+#pcPlay,#userPlay{
+    margin: 5px;
+    width: 50%;
+    background-color: firebrick
+}
+#round{
+    height: 80%;
+    width: 20%;
+    background-color: black;
+}
+#comment{
+    margin:5px;
+    height: 15%;
+    background-color: antiquewhite;
+}
+.playable{
+    margin: 5px;
+    height: 30%;
+    width: 75%;
+    background-color: azure;
+    border-radius: 10px;
+
+}
+.userPlay1{
+    position: relative;
+    background-color: aqua;
+    animation-name: played;
+    animation-duration: 4s;
+    z-index: 1;
+    
+}
+
+
+
+@keyframes played{
+    50%{
+
+        right: 100%;
+        bottom:25%;
+        
+    }
+
+}
+

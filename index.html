@@ -6,32 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
 </head>
-<script src="scripts/code.js"></script>
+<link rel="stylesheet" href="css/style.css">
 <body>
-    <div id="top">
+    <div id="header">
         <h1>Rock Paper Scissors</h1>
     </div>
-    <div id="center">
-        <div id="cLeft">
-            <div id="playable"></div>
-            <div id="playable"></div>
-            <div id="playable"></div>
+    <div id="container">
+        <div id="left">
+            <div class="playable" id="uRock">rock</div>
+            <div class="playable" id="uPaper">paper</div>
+            <div class="playable" id="uScissors">scissors</div>
         </div>
-        <div id="cCenter">
-            <div id="userPlayed"></div>
-            <div id="pcPlayed"></div>
+        <div id="center">
+            <div id="scoreboard">
+                <div id="score">
+                    <p></p>
+                    <span >Score</span>
+                </div>
+                <div id="round"></div>
+                <div id="score">
+                    <p></p>
+                    <span >Score</span>
+                </div>
+            </div>
+            <div id="game">
+                <div id="userPlay"></div>
+                <div id="pcPlay"></div>
+            </div>
+            
+            <div id="comment"></div>
         </div>
-        <div id="cRight">
-            <div id="playable"></div>
-            <div id="playable"></div>
-            <div id="playable"></div>
+        <div id="right">
+            <div class="playable" id="pRock">rock</div>
+            <div class="playable" id="pPaper">paper</div>
+            <div class="playable" id="pScissors">scissors</div>
+           
         </div>
-    </div>
-    <div id="bottom">
-        <div id="score"></div>
-        <div id="comment"></div>
-        <div id="score"></div>
     </div>
     
 </body>
+ <script src="scripts/code.js"></script> 
 </html>

@@ -1,4 +1,4 @@
-function computerPlay() {
+/* function computerPlay() {
     return Math.floor(Math.random() * 3);
 }
 let choice = ["rock", "paper", "scissors"];
@@ -50,4 +50,18 @@ for (let i = 0; userScore < nRounds && pcScore < nRounds; i++) {
     }
     alert(`This was Round ${i + 1} \n Your Score : ${userScore} Pc Score : ${pcScore}`);
 }
-alert(`Final score:  \n Your Score : ${userScore} Pc Score : ${pcScore}`);
+alert(`Final score:  \n Your Score : ${userScore} Pc Score : ${pcScore}`); */
+function playAnimation(e){
+    const play = document.querySelector(`.playable[id=${e.srcElement.id}]`);
+    play.classList.toggle("userPlay1");
+
+}
+const playable=document.querySelectorAll(".playable");
+playable.forEach(played=>{
+    played.addEventListener("click",playAnimation)
+})
+
+const keys= document.querySelectorAll(".key");
+keys.forEach(key => {
+    key.addEventListener("transitionend", removeTransition);
+});
