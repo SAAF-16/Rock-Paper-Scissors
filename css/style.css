@@ -102,7 +102,7 @@ h1{
     position: relative;
     background-color: aqua;
     animation-name: played;
-    animation-duration: 2s;
+    animation-duration: 1s;
     z-index: 1;   
 }
 .playAnim#uRock {
@@ -152,6 +152,15 @@ h1{
     --l:null;
     right:0px;
     bottom:0px;
+}
+.winner{
+    background-color: rgba(8, 241, 8, 0.367);
+    z-index: 2;
+}
+.loser{
+    background-color: rgba(241, 8, 8, 0.306);
+    z-index: 2;
+
 }
 
 
