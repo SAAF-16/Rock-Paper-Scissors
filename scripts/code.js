@@ -53,7 +53,8 @@ for (let i = 0; userScore < nRounds && pcScore < nRounds; i++) {
 alert(`Final score:  \n Your Score : ${userScore} Pc Score : ${pcScore}`); */
 function playAnimation(e){
     const play = document.querySelector(`.playable[id=${e.srcElement.id}]`);
-    play.classList.toggle("userPlay1");
+    play.classList.toggle("playAnim");
+    console.log(e)
 
 }
 const playable=document.querySelectorAll(".playable");
@@ -61,7 +62,11 @@ playable.forEach(played=>{
     played.addEventListener("click",playAnimation)
 })
 
-const keys= document.querySelectorAll(".key");
-keys.forEach(key => {
-    key.addEventListener("transitionend", removeTransition);
+const plays= document.querySelectorAll(".playable");
+plays.forEach(play => {
+    play.addEventListener("animationend",removeAnimation)
 });
+
+function removeAnimation(){
+    this.classList.remove("playAnim");
+    }

@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 body{
+    --z:0;
     height: 100vh;
     padding:20px 50px;
     margin: 0;
@@ -89,6 +90,7 @@ h1{
     background-color: antiquewhite;
 }
 .playable{
+    
     margin: 5px;
     height: 30%;
     width: 75%;
@@ -96,24 +98,73 @@ h1{
     border-radius: 10px;
 
 }
-.userPlay1{
+.playAnim{
     position: relative;
     background-color: aqua;
     animation-name: played;
-    animation-duration: 4s;
-    z-index: 1;
-    
+    animation-duration: 2s;
+    z-index: 1;   
+}
+.playAnim#uRock {
+    --t:35%;
+    --r:null;
+    --b:null;
+    --l:100%;
+    left:0px;
+    top:0px;
+}
+.playAnim#uPaper{
+    --t:null;
+    --r:null;
+    --b:null;
+    --l:100%;
+    left:0px;
+}
+.playAnim#uScissors{
+    --t:null;
+    --r:null;
+    --b:35%;
+    --l:100%;
+    left:0px;
+    bottom:0px;
+}
+
+.playAnim#pRock {
+    --t:35%;
+    --r:100%;
+    --b:null;
+    --l:null;
+    right:0px;
+    top:0px;
+}
+.playAnim#pPaper{
+    --t:null;
+    --r:100%;
+    --b:null;
+    --l:null;
+    right:0px;
+}
+
+.playAnim#pScissors{
+    --t:null;
+    --r:100%;
+    --b:35%;
+    --l:null;
+    right:0px;
+    bottom:0px;
 }
 
 
 
+
+
 @keyframes played{
-    50%{
 
-        right: 100%;
-        bottom:25%;
-        
+    50%{ 
+        top: var(--t);
+        right: var(--r);
+        bottom: var(--b);
+        left: var(--l);     
     }
-
 }
 
