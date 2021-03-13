@@ -12,7 +12,7 @@ let userScore = 0;
 let pcScore = 0;
 let userPlay;
 let pcPlay;
-let round;
+let round=0;
 /* ////////////////////// OLD CODE ///////////////////////////////////////////
 for (let i = 0; userScore < nRounds && pcScore < nRounds; i++) {
      x = true;
@@ -76,6 +76,7 @@ function begin() {
             alert("insert a valid input");
         }
     }
+    updateScore()
 }
 
 function checkEnd(comment) {
@@ -139,12 +140,15 @@ function gameTime() {
 function updateScore() {
     const uSide = document.querySelector("#userScore");
     const pSide = document.querySelector("#pcScore");
+    const currRound = document.querySelector("#pRound")
     uSide.textContent = userScore;
     pSide.textContent = pcScore;
+    currRound.textContent = round;
 
 }
 function calculateWinner() {
     const comment = document.querySelector("#pComment")
+    const currRound = document.querySelector("#pRound")
     const uSide = document.querySelector("#userPlay");
     const pSide = document.querySelector("#pcPlay");
     if (userPlay == choice[0]) {
@@ -169,6 +173,8 @@ function calculateWinner() {
     } else {
         comment.textContent = comments[userPlay][2];
     }
+    round++;
+    currRound.textContent = round;
     checkEnd(comment);
 }
 function playAnimation(e) {
