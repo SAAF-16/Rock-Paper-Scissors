@@ -1,208 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  min-width: 960px;
+  min-height: 670px;
+}
+.visible {
+  opacity: 1;
+}
+body {
+  opacity: 0;
+  transition: opacity 4s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --z: 0;
+  height: 100vh;
+  padding: 20px 50px;
+  margin: 0;
+  background-color: rgb(77, 172, 99);
+  display: flex;
+  flex-direction: column;
 
-*{
-    box-sizing: border-box;
-}
-body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --z:0;
-    height: 100vh;
-    padding:20px 50px;
-    margin: 0;
-    background-color: rgb(77, 172, 99);
-    display: flex;
-    flex-direction: column;
-}
-#header{
-    background-color: aliceblue;
-    height: 10%;
-    flex-shrink: 1;
-    text-align: center;
-    padding: 5px;
-}
-h1{
-    margin:0;
-}
-#container{
-    flex-shrink: 1;
-    flex-grow: 1;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: aqua
-    ;
-
-}
-#right,#left{
-    margin: 5px;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    background-color: antiquewhite;
-    align-items: center;
-    justify-content: space-around;
-
-}
-#center{
-    width: 50%;
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-}
-#scoreboard{
-    height: 15%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-#score{
-    height: 95%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    padding: 5px;
-    align-items: center;
-    justify-items: center;
-}
-#score>p{
-    height: 70%;
-    margin:0;
-    font-size: 40px;
-}
-#score>span{
-    height: 30%;
-    font-size: large;
-    font-weight: bold;
-
+  background: url("../img/background.jpg");
+  background-size: 100% 100%;
+  animation: gradient 5s ease infinite;
 }
 
-#game{
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    background-color: antiquewhite;
-    height: 70%;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
-#pcPlay,#userPlay{
-    margin: 5px;
-    width: 50%;
+#header {
+  background-color: rgb(172, 145, 110);
+  height: 10%;
+  margin: 0px 30%;
+  flex-shrink: 1;
+  text-align: center;
+  padding: 5px;
+  border: solid black;
+  border-radius: 10px;
 }
-#round{
-    height: 80%;
-    width: 20%;
-    background-color: black;
+h1 {
+  margin: 0;
 }
-#comment{
-    margin:5px;
-    height: 15%;
-    background-color: antiquewhite;
+#container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-#pComment{
-    font-size: x-large;
-    text-align: center;
+#right,
+#left {
+  margin: 5px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  border: black dotted 4px;
+  background: url("../img/bricks.jpg");
 }
-.playable{
-    
-    margin: 5px;
-    height: 30%;
-    width: 75%;
-    background-color: azure;
-    border-radius: 10px;
+#center {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: url("../img/battle.jpg") no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 0px 20px;
+}
+#scoreboard {
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+#score {
+  height: 95%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding: 5px;
+  align-items: center;
+  justify-items: center;
+}
+#score > p {
+  height: 70%;
+  margin: 0;
+  font-size: 40px;
+}
+#score > span {
+  height: 30%;
+  font-size: large;
+  font-weight: bold;
+}
 
+#game {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(30, 15, 3, 0.428);
+  height: 70%;
+
+  border-radius: 4px;
+  box-shadow: rgb(255, 81, 0) 0 0 20px;
 }
-.playAnim{
-    position: relative;
-    background-color: aqua;
-    animation-name: played;
-    animation-duration: 1s;
-    z-index: 1;   
+#pcPlay,
+#userPlay {
+  margin: 5px;
+  width: 50%;
+}
+#round {
+  height: 80%;
+  width: 20%;
+  background-color: black;
+}
+#comment {
+  margin: 5px;
+  height: 15%;
+  background-color: rgb(172, 145, 110);
+  border-radius: 20px;
+  border: solid black;
+}
+#pComment {
+  font-size: x-large;
+  text-align: center;
+}
+#uRock,
+#pRock {
+  background: url("../img/rock.png") center no-repeat;
+  background-size: contain;
+}
+#uPaper,
+#pPaper {
+  background: url("../img/paper.png") center no-repeat;
+  background-size: contain;
+}
+#uScissors,
+#pScissors {
+  background: url("../img/scissors.png") center no-repeat;
+  background-size: contain;
+}
+.playable img {
+  position: sticky;
+  height: 70px;
+  width: 70px;
+  z-index: -10;
+  margin: 0 auto;
+}
+.playable {
+  margin: 5px;
+  height: 30%;
+  width: 75%;
+
+  border-radius: 10px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 1s;
+}
+.playable.user:hover {
+  box-shadow: 0 0 30px red;
+}
+.playAnim {
+  position: relative;
+  animation-name: played;
+  animation-duration: 1s;
 }
 .playAnim#uRock {
-    --top:33%;
-    --right:null;
-    --bottom:null;
-    --left:100%;
-    left:0px;
-    top:0px;
+  --top: 33%;
+  --right: null;
+  --bottom: null;
+  --left: 110%;
+  left: 0px;
+  top: 0px;
 }
-.playAnim#uPaper{
-    --top:null;
-    --right:null;
-    --bottom:null;
-    --left:100%;
-    left:0px;
+.playAnim#uPaper {
+  --top: null;
+  --right: null;
+  --bottom: null;
+  --left: 110%;
+  left: 0px;
 }
-.playAnim#uScissors{
-    --top:null;
-    --right:null;
-    --bottom:33%;
-    --left:100%;
-    left:0px;
-    bottom:0px;
+.playAnim#uScissors {
+  --top: null;
+  --right: null;
+  --bottom: 33%;
+  --left: 110%;
+  left: 0px;
+  bottom: 0px;
 }
 
 .playAnim#pRock {
-    --top:33%;
-    --right:100%;
-    --bottom:null;
-    --left:null;
-    right:0px;
-    top:0px;
+  --top: 33%;
+  --right: 110%;
+  --bottom: null;
+  --left: null;
+  right: 0px;
+  top: 0px;
 }
-.playAnim#pPaper{
-    --top:null;
-    --right:100%;
-    --bottom:null;
-    --left:null;
-    right:0px;
-}
-
-.playAnim#pScissors{
-    --top:null;
-    --right:100%;
-    --bottom:33%;
-    --left:null;
-    right:0px;
-    bottom:0px;
-}
-.winner{
-    --background: rgba(0, 255, 0, 0.394);
-
-    animation-name: result;
-    animation-delay: 0.3ms;
-    animation-duration: 1.7s;
-}
-.loser{
-    --background: rgba(255, 0, 0, 0.408);
- 
-    animation-name: result;
-    animation-delay: 0.3ms;
-    animation-duration: 1.7s;
-
+.playAnim#pPaper {
+  --top: null;
+  --right: 110%;
+  --bottom: null;
+  --left: null;
+  right: 0px;
 }
 
-
-@keyframes result{
-    50%{
-        background-color: var(--background);
-    }
+.playAnim#pScissors {
+  --top: null;
+  --right: 110%;
+  --bottom: 33%;
+  --left: null;
+  right: 0px;
+  bottom: 0px;
+}
+.winner {
+  transition: background-color 1s;
+  background-color: rgba(0, 255, 0, 0.394);
+}
+.loser {
+  transition: background-color 1s;
+  background-color: rgba(255, 0, 0, 0.408);
 }
 
-
-@keyframes played{
-
-    50%{ 
-        top: var(--top);
-        right: var(--right);
-        bottom: var(--bottom);
-        left: var(--left);     
-    }
-    80%{ 
-        top: var(--top);
-        right: var(--right);
-        bottom: var(--bottom);
-        left: var(--left);     
-    }
+@keyframes played {
+  50% {
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+  }
+  85% {
+    top: var(--top);
+    right: var(--right);
+    bottom: var(--bottom);
+    left: var(--left);
+  }
 }
-
