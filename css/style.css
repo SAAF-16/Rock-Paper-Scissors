@@ -1,7 +1,9 @@
+
 *{
     box-sizing: border-box;
 }
 body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --z:0;
     height: 100vh;
     padding:20px 50px;
@@ -54,17 +56,25 @@ h1{
     align-items: flex-end;
 }
 #score{
-    height: 80%;
+    height: 95%;
     width: 30%;
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
+    padding: 5px;
+    align-items: center;
+    justify-items: center;
 }
 #score>p{
     height: 70%;
+    margin:0;
+    font-size: 40px;
 }
 #score>span{
     height: 30%;
+    font-size: large;
+    font-weight: bold;
+
 }
 
 #game{
@@ -77,7 +87,6 @@ h1{
 #pcPlay,#userPlay{
     margin: 5px;
     width: 50%;
-    background-color: firebrick
 }
 #round{
     height: 80%;
@@ -88,6 +97,10 @@ h1{
     margin:5px;
     height: 15%;
     background-color: antiquewhite;
+}
+#pComment{
+    font-size: x-large;
+    text-align: center;
 }
 .playable{
     
@@ -106,74 +119,90 @@ h1{
     z-index: 1;   
 }
 .playAnim#uRock {
-    --t:35%;
-    --r:null;
-    --b:null;
-    --l:100%;
+    --top:33%;
+    --right:null;
+    --bottom:null;
+    --left:100%;
     left:0px;
     top:0px;
 }
 .playAnim#uPaper{
-    --t:null;
-    --r:null;
-    --b:null;
-    --l:100%;
+    --top:null;
+    --right:null;
+    --bottom:null;
+    --left:100%;
     left:0px;
 }
 .playAnim#uScissors{
-    --t:null;
-    --r:null;
-    --b:35%;
-    --l:100%;
+    --top:null;
+    --right:null;
+    --bottom:33%;
+    --left:100%;
     left:0px;
     bottom:0px;
 }
 
 .playAnim#pRock {
-    --t:35%;
-    --r:100%;
-    --b:null;
-    --l:null;
+    --top:33%;
+    --right:100%;
+    --bottom:null;
+    --left:null;
     right:0px;
     top:0px;
 }
 .playAnim#pPaper{
-    --t:null;
-    --r:100%;
-    --b:null;
-    --l:null;
+    --top:null;
+    --right:100%;
+    --bottom:null;
+    --left:null;
     right:0px;
 }
 
 .playAnim#pScissors{
-    --t:null;
-    --r:100%;
-    --b:35%;
-    --l:null;
+    --top:null;
+    --right:100%;
+    --bottom:33%;
+    --left:null;
     right:0px;
     bottom:0px;
 }
 .winner{
-    background-color: rgba(8, 241, 8, 0.367);
-    z-index: 2;
+    --background: rgba(0, 255, 0, 0.394);
+
+    animation-name: result;
+    animation-delay: 0.3ms;
+    animation-duration: 1.7s;
 }
 .loser{
-    background-color: rgba(241, 8, 8, 0.306);
-    z-index: 2;
+    --background: rgba(255, 0, 0, 0.408);
+ 
+    animation-name: result;
+    animation-delay: 0.3ms;
+    animation-duration: 1.7s;
 
 }
 
 
-
+@keyframes result{
+    50%{
+        background-color: var(--background);
+    }
+}
 
 
 @keyframes played{
 
     50%{ 
-        top: var(--t);
-        right: var(--r);
-        bottom: var(--b);
-        left: var(--l);     
+        top: var(--top);
+        right: var(--right);
+        bottom: var(--bottom);
+        left: var(--left);     
+    }
+    80%{ 
+        top: var(--top);
+        right: var(--right);
+        bottom: var(--bottom);
+        left: var(--left);     
     }
 }
 
