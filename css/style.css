@@ -295,6 +295,9 @@ h1 {
   /*  *:not(:root){
         transform: scale(0.9);
     } */
+    #creator{
+        bottom: 70px;
+    }
   body {
     min-width: 0px;
     min-height: 0px;
