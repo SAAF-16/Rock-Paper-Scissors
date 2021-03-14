@@ -32,7 +32,7 @@ body {
   flex-shrink: 1;
   text-align: center;
   padding: 5px;
-  border: solid black;
+  border: solid black 3px;
   border-radius: 10px;
   flex-shrink: 0;
 }
@@ -81,14 +81,16 @@ h1 {
   align-items: flex-end;
 }
 #score {
-  height: 95%;
+  height: 85%;
   width: 30%;
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
+  background-color: white;
   padding: 5px;
   align-items: center;
   justify-items: center;
+  border-radius: 5px;
+  border: solid rgb(66, 44, 3);
 }
 #score > p {
   height: 70%;
@@ -128,6 +130,7 @@ h1 {
   height: 80%;
   width: 20%;
   background-color: white;
+  border: solid rgb(66, 44, 3);
 }
 #round span {
   font-weight: bold;
