@@ -9,7 +9,7 @@ let userScore = 0;
 let pcScore = 0;
 let userPlay;
 let pcPlay;
-let round=0;
+let round = 0;
 
 document.querySelector("body").classList.add("visible");
 setTimeout(function () { begin(); }, 500);
