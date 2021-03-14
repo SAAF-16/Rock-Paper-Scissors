@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 :root {
-  min-width: 960px;
-  min-height: 670px;
+   min-width: 820px;
+   min-height: 550px; 
+  
   background: url("../img/background.jpg") center no-repeat;
   background-size: 100% 100%;
 }
@@ -11,6 +12,7 @@
   opacity: 1;
 }
 body {
+    min-height: 550px; 
   opacity: 0;
   transition: opacity 4s;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -21,33 +23,31 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-
-
 }
 
 #header {
-  background-color: rgb(172, 145, 110);
+  background-color: rgba(172, 145, 110, 0.612);
   height: 10%;
-  margin: 0px 30%;
+ margin: 0 30%;
   flex-shrink: 1;
   text-align: center;
-  padding: 5px;
+  padding: 10px 5px;
   border: solid black 3px;
   border-radius: 10px;
   flex-shrink: 0;
 }
 h1 {
+    font-size: 160%;
   margin: 0;
   color: rgb(86, 59, 9);
 }
 #container {
   flex-shrink: 1;
-    flex-grow: 1;
+  flex-grow: 1;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
-
 }
 #right,
 #left {
@@ -65,7 +65,7 @@ h1 {
   background-size: contain;
 }
 #center {
-    box-shadow: 0px 10px 8px black;
+  box-shadow: 0px 10px 8px black;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -95,16 +95,16 @@ h1 {
 #score > p {
   height: 70%;
   margin: 0;
-  font-size: 40px;
+  font-size: 180%;
 }
 #score > span {
   height: 30%;
-  font-size: large;
+  font-size:90%;
   font-weight: bold;
 }
 #pRound {
   height: 70%;
-  font-size: xx-large;
+  font-size: 180%;
 }
 
 #game {
@@ -133,17 +133,20 @@ h1 {
   border: solid rgb(66, 44, 3);
 }
 #round span {
+    font-size: 90%;
   font-weight: bold;
 }
 #comment {
   margin: 5px;
+  padding: 5px 5px;
   height: 15%;
   background-color: rgb(172, 145, 110);
   border-radius: 20px;
   border: solid black;
 }
 #pComment {
-  font-size: x-large;
+  margin: 0;
+  font-size: 90%;
   text-align: center;
 }
 #uRock,
@@ -259,55 +262,69 @@ h1 {
     left: var(--left);
   }
 }
-@media screen and (max-width: 1024px){
-
-   /*  *:not(:root){
-        transform: scale(0.9);
-    } */
-    body{
-        margin: 0px 0px 0px 0px;
-        padding: 80px 0px 0px 0px;
-        width: 100vw;
-        height: 100vh;
-    }
-    #header{
-        margin: 2vmin;
-    }
-    #container{
-        margin-top: 40px;
-        height: 55%;
-        padding-bottom: 120px;
-    }
-    #center,#left,#right{
-        margin: 2px;
-    }
-    #game{
+@media screen and (max-width: 1000px) {
+    #game {
         box-shadow: rgb(255, 81, 0) 0 0 5px;
-    }
-    #pComment{
-        margin:0;
-        font-size: 4vmin;
-    }
-    #score>p,#pRound{
-        margin:0;
-        font-size: 5vmin;
-    }
-    #score>span{
-        font-size: 2vmin;
-    }
-    #round span{
-        font-size: 2vmin;
-    }
-    .playable.user:hover {
+      }
+      .playable.user:hover {
         box-shadow: 0 0 0;
       }
-      h1{
-          font-size: 8vmin;
+      header{
+      margin: 0 0;
       }
-    :root{
+}
+@media screen and (max-width: 500px) {
+  /*  *:not(:root){
+        transform: scale(0.9);
+    } */
+  body {
+    min-width: 0px;
+    min-height: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
+    width: 100vw;
+    height: 100vh;
+  }
+  #header {
+    margin: 2vmin;
+  }
+  #container {
+    margin-top: 40px;
+    height: 55%;
+    padding-bottom: 120px;
+  }
+  #center,
+  #left,
+  #right {
+    margin: 2px;
+  }
+  #game {
+    box-shadow: rgb(255, 81, 0) 0 0 5px;
+  }
+  #pComment {
+    margin: 0;
+    font-size: 4vmin;
+  }
+  #score > p,
+  #pRound {
+    font-size: 5vmin;
+  }
+  #score > span {
+    font-size: 2vmin;
+  }
+  #round span {
+    font-size: 2vmin;
+  }
+  .playable.user:hover {
+    box-shadow: 0 0 0;
+  }
+  h1 {
+    font-size: 8vmin;
+  }
+  :root {
     min-width: 0px;
     min-height: 0px;
     height: 100vh;
     width: 100vw;
-    }
+  }
 }
