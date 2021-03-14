@@ -51,7 +51,7 @@ function randomNumber() {
 }
 function userSelectPlay() {
     return uPlayed => {
-
+        if(userScore==nRounds||pcScore==nRounds)return;//so that nothing is clickable
         if (`${uPlayed.id}`[0] == "p")
             return; //if a computer tile is pressed it doesn't go on
 
@@ -66,6 +66,7 @@ function userSelectPlay() {
 }
 function gameTime() {
     return (e) => {
+        if(userScore==nRounds||pcScore==nRounds)return;//so that nothing is clickable
         playAnimation(e);
         calculateWinner(e);
 
