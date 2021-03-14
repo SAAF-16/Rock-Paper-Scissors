@@ -38,6 +38,7 @@ body {
 }
 h1 {
   margin: 0;
+  color: rgb(86, 59, 9);
 }
 #container {
   flex-shrink: 1;
@@ -58,13 +59,13 @@ h1 {
   align-items: center;
   justify-content: space-around;
   border-radius: 20px;
-  border: rgba(0, 0, 0, 0.537) dotted 4px;
-  box-shadow: 0px 4px 3px black;
+  border: rgba(128, 88, 3, 0.66) dotted 4px;
+  box-shadow: 0px 10px 8px black;
   background: url("../img/bricks.jpg");
   background-size: contain;
 }
 #center {
-    box-shadow: 0px 4px 20px black;
+    box-shadow: 0px 10px 8px black;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -255,9 +256,7 @@ h1 {
     left: var(--left);
   }
 }
-
-
-@media screen and (max-width: 530px){
+@media screen and (max-width: 1024px){
 
    /*  *:not(:root){
         transform: scale(0.9);
@@ -282,21 +281,26 @@ h1 {
     #game{
         box-shadow: rgb(255, 81, 0) 0 0 5px;
     }
-    #pComment,#score>p,#pRound{
+    #pComment{
         margin:0;
-        font-size: 100%;
+        font-size: 4vmin;
     }
     #score>p,#pRound{
         margin:0;
-        font-size: 170%;
+        font-size: 5vmin;
     }
     #score>span{
-        font-size: 80%;
+        font-size: 2vmin;
     }
     #round span{
-        font-size: 70%;
+        font-size: 2vmin;
     }
-
+    .playable.user:hover {
+        box-shadow: 0 0 0;
+      }
+      h1{
+          font-size: 8vmin;
+      }
     :root{
     min-width: 0px;
     min-height: 0px;
