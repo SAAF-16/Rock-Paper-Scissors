@@ -44,7 +44,7 @@ body {
 }
 
 #header {
-  background-color: rgba(172, 145, 110, 0.612);
+  background-color: rgba(145, 114, 73, 0.612);
   height: 10%;
   margin: 0 30%;
   flex-shrink: 1;
@@ -66,20 +66,22 @@ h1 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly
 }
 #right,
 #left {
   margin: 5px;
-  width: 25%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   background-color: black;
   align-items: center;
   justify-content: space-around;
   border-radius: 20px;
-  border: rgba(128, 88, 3, 0.66) dotted 4px;
+  border: rgba(13, 76, 2, 0.66) dotted 4px;
   box-shadow: 0px 10px 8px black;
-  background: url("../img/bricks.jpg");
+  background:  url("../img/bricks.jpg") ;
+  
   background-size: contain;
 }
 #center {
@@ -158,7 +160,7 @@ h1 {
   margin: 5px;
   padding: 2% 5px;
   height: 15%;
-  background-color: rgb(172, 145, 110);
+  background-color: rgb(150, 115, 70);
   border-radius: 20px;
   border: solid black;
 }
@@ -202,7 +204,7 @@ h1 {
   transition: box-shadow 1s;
 }
 .playable.user:hover {
-  box-shadow: 0 0 30px red;
+  box-shadow: 0 0 30px rgb(126, 2, 2);
 }
 .playAnim {
   position: relative;
@@ -213,7 +215,7 @@ h1 {
   --top: 33%;
   --right: null;
   --bottom: null;
-  --left: 110%;
+  --left: 180%;
   left: 0px;
   top: 0px;
 }
@@ -221,21 +223,21 @@ h1 {
   --top: null;
   --right: null;
   --bottom: null;
-  --left: 110%;
+  --left: 180%;
   left: 0px;
 }
 .playAnim#uScissors {
   --top: null;
   --right: null;
   --bottom: 33%;
-  --left: 110%;
+  --left: 180%;
   left: 0px;
   bottom: 0px;
 }
 
 .playAnim#pRock {
   --top: 33%;
-  --right: 110%;
+  --right: 180%;
   --bottom: null;
   --left: null;
   right: 0px;
@@ -243,7 +245,7 @@ h1 {
 }
 .playAnim#pPaper {
   --top: null;
-  --right: 110%;
+  --right: 180%;
   --bottom: null;
   --left: null;
   right: 0px;
@@ -251,7 +253,7 @@ h1 {
 
 .playAnim#pScissors {
   --top: null;
-  --right: 110%;
+  --right: 180%;
   --bottom: 33%;
   --left: null;
   right: 0px;
@@ -299,8 +301,8 @@ h1 {
         bottom: 70px;
     }
   body {
-    min-width: 0px;
-    min-height: 0px;
+    min-width: 250px;
+    min-height: 600px;
     margin: 0px 0px 0px 0px;
     padding: 80px 0px 0px 0px;
     width: 100vw;
@@ -324,28 +326,26 @@ h1 {
   }
   #pComment {
     margin: 0;
-    font-size: 4vmin;
+    font-size: 10px;
   }
   #score > p,
   #pRound {
-    font-size: 5vmin;
+    font-size:10px;
   }
   #score > span {
-    font-size: 2vmin;
+    font-size: 7px;
   }
   #round span {
-    font-size: 2vmin;
+    font-size: 7px;
   }
   .playable.user:hover {
     box-shadow: 0 0 0;
   }
   h1 {
-    font-size: 8vmin;
+    font-size: 15px;
   }
   :root {
-    min-width: 0px;
-    min-height: 0px;
-    height: 100vh;
-    width: 100vw;
+    min-width: 250px;
+    min-height: 600px;
   }
 }
