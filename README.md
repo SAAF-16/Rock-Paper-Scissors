@@ -10,8 +10,8 @@ against an AI (random). All the action are animated and there's  a scoreboard th
 pc score and the actual round. There are also various comments for every round.I'ts also possible to play from a 
 tablet or a mobile phone
 
-## What i did and learned
-In this project i applyed all my currect knoledge(14/03/2021) about Html CSS and Javascript, i learned a lot about positioning
+## What i've learned
+In this project i applied all my current knoledge(14/03/2021) about Html CSS and Javascript, i learned a lot about positioning
 objects, using arrays to make the code work in a more "smart" way applying and removing animations through CSS and Javascript,
 implementing media querys in an animated enviroment and the use of variables
 The biggest struggle, that made me lose most of the time, was to understand how to make the varius objects move as i wanted
