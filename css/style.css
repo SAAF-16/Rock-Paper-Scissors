@@ -390,7 +390,7 @@ h1 {
     left: var(--left);
   }
 }
-@media screen and (max-width: 900px) and (max-height: 1030px) {
+/* @media screen and (max-width: 900px) and (max-height: 1030px) {
   #container,
   #creator {
     margin: 10px auto;
@@ -410,7 +410,7 @@ h1 {
     min-height: unset;
     height: 90vh;
   }
-}
+} */
 @media screen and (max-width: 900px) {
   #container,
   #creator {
