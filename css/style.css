@@ -46,7 +46,7 @@ body {
   display: none;
 }
 #game-start.moveout {
-  top: 800px;
+  top: 100%;
 }
 #game-over.moveout {
   display: none;
@@ -390,7 +390,27 @@ h1 {
     left: var(--left);
   }
 }
-
+@media screen and (max-width: 900px) and (max-height: 1030px) {
+  #container,
+  #creator {
+    margin: 10px auto;
+  }
+  #game-start,
+  #game-over {
+  }
+  #gameContainer {
+    margin-top: 200px;
+    height: 60vh;
+    padding: 5px 10px;
+    min-width: unset;
+    min-height: unset;
+  }
+  :root {
+    min-width: unset;
+    min-height: unset;
+    height: 90vh;
+  }
+}
 @media screen and (max-width: 900px) {
   #container,
   #creator {
