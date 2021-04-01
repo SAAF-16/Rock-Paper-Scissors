@@ -417,9 +417,20 @@ h1 {
     zoom: 0.6;
     margin: 10px auto;
   }
+  #gs-pop,
+  #go-pop {
+    padding: 10px 5px;
+  }
+  #gs-pop-down,
+  #go-pop-dowm {
+    margin-top: 5px;
+  }
   #game-start,
   #game-over {
-    zoom: 0.7;
+    zoom: 0.75;
+  }
+  button {
+    zoom: 0.8;
   }
   #gameContainer {
     padding: 5px 10px;
