@@ -45,7 +45,11 @@ function showGameOver() {
         gameOver.classList.add('moveout');
         gameStart.classList.remove('moveout');
         gameStart.classList.add('movein');
+        userScore = 0;
+        pcScore = 0;
+        round = 0;       
         comment.textContent = "So we back at it again!";
+        updateScore();
     };
 }
 
@@ -148,11 +152,8 @@ function checkEnd() {
         } else {
             comment.textContent = ".. you really lost to a random AI";
         }
-        userScore = 0;
-        pcScore = 0;
-        round = 0;
-        updateScore();
-        gameOver.classList.add('movein');
+       
+       setTimeout(()=>{gameOver.classList.add('movein');},800) 
     }
 
 }
