@@ -65,9 +65,10 @@ body {
   border-radius: 70px;
   border: solid;
   padding: 30px 20px;
-  height: 50%;
+  height: 40%;
+  width: 75%;
   position: relative;
-  margin: 30vh 0;
+  margin: 30vh auto;
   background-color: rgb(150, 115, 70);
   display: flex;
   justify-content: space-between;
