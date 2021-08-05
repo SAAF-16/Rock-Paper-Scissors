@@ -7,5 +7,11 @@ tablet or a mobile phone
 ## Live Page
 https://saaf-16.github.io/Rock-Paper-Scissors/
 
+## Screenshots
+![CPT2108051958-500x238](https://user-images.githubusercontent.com/79462238/128399237-188fe9e9-45f7-4075-afb5-8547c8ee0a9e.gif)
+
+
+
+
 Project from The Odin Project program (www.theodinproject.com)
 
